@@ -12,5 +12,12 @@ Rails.application.routes.draw do
   # delete "doctors/:id", to: "doctors#destroy", as: :delete_doctor
 
   root to: "pages#home"
-  resources :doctors, :patients
+  resources :doctors do
+    resources :educations, only: [:new, :create]
+  end
+  resources :educations, only: [:edit, :update]
+  resources :patients do
+    resources :appointments, only: [:new, :create]
+  end
+  resources :appointments
 end
