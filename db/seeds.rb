@@ -49,3 +49,16 @@ puts 'Creating 5 fake patients...'
   patient.save!
 end
 puts 'Finished!'
+
+Appointment.destroy_all
+5.times do
+  appointment = Appointment.new(
+    date: Faker::Date.between(from: Date.today, to: 1.year.from_now),
+    cause: ['Broken Arm', 'Broken Heart', 'Grippe', 'Reflux', 'OCD'].sample,
+    urgent: Faker::Boolean.boolean,
+    patient: Patient.all.sample,
+    doctor: Doctor.all.sample
+  )
+  appointment.save!
+end
+puts 'Finished!'
