@@ -1,0 +1,7 @@
+<%= simple_form_for [@patient, @appointment] do |f| %>
+  <%= f.input :date %>
+  <%= f.input :cause %>
+  <%= f.input :urgent %>
+  <%= f.association :doctor, label_method: :create_tag %>
+  <%= f.submit %>
+<% end %>

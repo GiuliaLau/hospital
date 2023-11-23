@@ -1,0 +1,56 @@
+.card-category {
+  background-size: contain;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+	padding: 1rem;
+}
+
+.doctor-list {
+	// max-width: 70rem;
+	// margin: 0 auto;
+	// padding: clamp(1rem, 2vw, 3rem);
+	// border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+
+  div{
+    padding: 30px;
+    background-color: rgb(102, 123, 197);
+    border-radius: 10px;
+  }
+}
+
+dt {
+	font-weight: 700;
+	font-size: 1.3rem;
+}
+
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}

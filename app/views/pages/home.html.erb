@@ -1,5 +1,22 @@
-<ul>
-  <%= link_to "Doctors", doctors_path %>
-  <%= link_to "Patients", patients_path %>
-  <%= link_to "Appointments", appointments_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/free-photo/people-carrying-burden-concept_23-2150040368.jpg); height: 100vh;">
+<div class="container">
+<div class="text-center">
+  <h1>Welcome to Le Wagon Hospital 🤕</h1>
+<h2>🌿 ready to cure your burnout 🌱</h2>
+</div>
+<div class="d-flex justify-content-center">
+  <div class="menu-card">
+    <%= link_to "Doctors", doctors_path %>
+    <div class= "d-flex justify-content-center align-items-center"> <img class="rounded-circle alumnus-avatar" src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1632128551/mt74bsqhtqmlacjewm1e.jpg">
+    </div>
+  </div>
+  <div class="menu-card">
+    <%= link_to "Patients", patients_path %>
+  </div>
+  <div class="menu-card">
+    <%= link_to "Appointments", appointments_path %>
+    <div class= "d-flex justify-content-center align-items-center"> <img class="rounded-circle alumnus-avatar" src="https://cdn.papershift.com/20221130212527/time-off-eligibility-for-medical-appointments-for-employees-in-UK-explained-by-Papershift.jpeg">
+  </div>
 </ul>
+</div>
+</div>
