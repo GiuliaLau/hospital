@@ -7,4 +7,8 @@ class Doctor < ApplicationRecord
   validates :experience, inclusion: { in: 2..6 }
   validates :title, inclusion: { in: ['Prof', 'Dr']}
   validates :specialty, inclusion: { in: ['Dermatologist', 'Pneumologist', 'Cardiologist', 'Dentist', 'GP'] }
+
+  def create_tag
+    "#{title}, #{first_name} #{last_name}"
+  end
 end

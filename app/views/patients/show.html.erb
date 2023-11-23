@@ -4,3 +4,11 @@
 <p><%= @patient.cured %></p>
 <%= link_to "edit patient", edit_patient_path %>
 <%= link_to "Delete", patient_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%= link_to "Make an appointment", new_patient_appointment_path(@patient) %>
+
+<h1>Appointments :</h1>
+<% @patient.appointments.each do |appointment| %>
+<h4><%= appointment.cause %></h4>
+<h4><%= appointment.doctor.title %> <%= appointment.doctor.first_name %> <%= appointment.doctor.last_name %></h4>
+<h4><%= appointment.date %></h4>
+<% end %>

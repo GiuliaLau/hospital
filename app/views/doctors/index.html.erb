@@ -1,10 +1,11 @@
-<h1> List of Doctors </h1>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/28/1531305470-greys-left.jpg);">
+  Doctors
+</div>
 
-<ul>
+<div class= "doctor-list mt-5 mb-5">
   <% @doctors.each do |doctor| %>
-    <li><%= link_to "#{doctor.first_name} #{doctor.last_name}", doctor_path(doctor) %></li>
+    <div><%= link_to "#{doctor.first_name} #{doctor.last_name}", doctor_path(doctor) %></div>
   <% end %>
-</ul>
+</div>
 
-<%= link_to "Add new Doctor", new_doctor_path %>
-<%= link_to "Add Appointment" %>
+<%= link_to "Add new Doctor", new_doctor_path, class: "btn btn-gradient" %></a>
