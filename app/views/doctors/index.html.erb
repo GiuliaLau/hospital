@@ -1,5 +1,5 @@
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/28/1531305470-greys-left.jpg);">
-  Doctors
+  Doctors 👩🏼‍⚕️👨🏻‍⚕️
 </div>
 
 <div class= "doctor-list mt-5 mb-5">
@@ -7,5 +7,6 @@
     <div><%= link_to "#{doctor.first_name} #{doctor.last_name}", doctor_path(doctor) %></div>
   <% end %>
 </div>
-
-<%= link_to "Add new Doctor", new_doctor_path, class: "btn btn-gradient" %></a>
+<div class="d-flex justify-content-center">
+  <%= link_to "Add new Doctor", new_doctor_path, class: "btn btn-gradient" %>
+</div>

@@ -1,3 +1,20 @@
+.patients {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  font-weight: bold;
+  padding: 30px
+}
+
+.patient-card {
+display: flex;
+align-items: center;
+
+}
+
+.patient-content {
+  margin-left: 10px;
+
 .button {
   background-color: rgb(174, 174, 160);
   border-radius: 5px;

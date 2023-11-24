@@ -11,6 +11,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
 }
 
 body {
@@ -27,10 +28,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  font-weight: bold;
 
   div{
     padding: 30px;
-    background-color: rgb(102, 123, 197);
+    background-color: #D2E0FB;
     border-radius: 10px;
   }
 }
@@ -47,10 +49,16 @@ dt {
   font-weight: bold;
   background: linear-gradient(#167FFB, #0F60C4);
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
+  border: 1px solid #5e8bc3;
+  margin-top: 10px;
 }
 
 .btn-gradient:hover {
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+body {
+  background-color: #F9F3CC
+}
+
