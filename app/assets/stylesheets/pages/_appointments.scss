@@ -1,0 +1,13 @@
+.appointments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.appointment-card {
+  background-color: rgb(236, 204, 154);
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
