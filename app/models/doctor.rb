@@ -9,6 +9,6 @@ class Doctor < ApplicationRecord
   validates :specialty, inclusion: { in: ['Dermatologist', 'Pneumologist', 'Cardiologist', 'Dentist', 'GP'] }
 
   def create_tag
-    "#{title}, #{first_name} #{last_name}"
+    "#{title} #{first_name} #{last_name}"
   end
 end
