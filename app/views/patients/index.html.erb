@@ -1,8 +1,17 @@
-<h1>Sick Patients:</h1>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://pyxis.nymag.com/v1/imgs/425/42f/ba50757cbefcd1a9960216652eb5260ed2-06-greys-anatomy-silent-all-these-years.2x.rsocial.w600.jpg);">
+  Sick Patients 🥴
+</div>
 
-<ul>
+<div class="patients">
   <% @uncured_patients.each do |patient| %>
-    <li><%= link_to "#{patient.first_name} #{patient.last_name}", patient_path(patient) %></li>
+    <div class="patient-card">
+      <img src="https://img.freepik.com/vector-premium/icono-ginecologo-mujer-ilustracion-plana-icono-vector-ginecologo-mujer-diseno-web_98396-27461.jpg" class="avatar-large" />
+      <div class="patient-content">
+        <strong><%= link_to "#{patient.first_name} #{patient.last_name}", patient_path(patient) %></strong>
+      </div>
+    </div>
   <% end %>
-</ul>
-<%= link_to "Create new Patient", new_patient_path %>
+</div>
+<div class="d-flex justify-content-center">
+  <%= link_to "Create new Patient", new_patient_path, class: "btn btn-gradient" %>
+</div>
