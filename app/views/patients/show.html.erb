@@ -1,14 +1,23 @@
-<h2><%= @patient.first_name %></h2>
-<p><%= @patient.last_name%></p>
-<p><%= @patient.insurance %></p>
-<p><%= @patient.cured %></p>
-<%= link_to "edit patient", edit_patient_path %>
-<%= link_to "Delete", patient_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<%= link_to "Make an appointment", new_patient_appointment_path(@patient) %>
-
-<h1>Appointments :</h1>
-<% @patient.appointments.each do |appointment| %>
-<h4><%= appointment.cause %></h4>
-<h4><%= appointment.doctor.title %> <%= appointment.doctor.first_name %> <%= appointment.doctor.last_name %></h4>
-<h4><%= appointment.date %></h4>
-<% end %>
+<div class="patient-info" >
+  <h2> 👤 <%= @patient.first_name %> <%= @patient.last_name%></h2>
+  <h3>Insurance: <%= @patient.insurance %></h3>
+</div>
+<br>
+<br>
+<h1> 🗓️ Appointments :</h1>
+  <div class="appointments">
+    <% @patient.appointments.each do |appointment| %>
+    <div class="appointment-card">
+      <h2><%= appointment.doctor.title %> <%= appointment.doctor.first_name %> <%= appointment.doctor.last_name %></h2>
+      <h3><%= appointment.cause %></h3>
+      <h3><%= appointment.date %></h3>
+    </div>
+    <% end %>
+</div>
+<br>
+<br>
+<div class="actions">
+<%= link_to "Edit patient", edit_patient_path, class: "btn button" %>
+<%= link_to "Delete", patient_path, class: "btn button", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%= link_to "Make an appointment", new_patient_appointment_path(@patient), class: "btn button" %>
+</div>
